@@ -15,6 +15,8 @@ const SignUpScreen = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [getEmailValidationStatus, setGetEmailValidationStatus] = useState(false);
+
 
   const [avatar, setAvatar] = useState(avatars[0]?.image.asset.url)
   const [isavatarMenu, setIsAvatarMenu] = useState(false)
@@ -103,6 +105,8 @@ const SignUpScreen = () => {
             placeholder="Email"
             isPass={false}
             setStateValue={setEmail}
+            setGetEmailValidationStatus={setGetEmailValidationStatus}
+
           />
 
           {/* password */}

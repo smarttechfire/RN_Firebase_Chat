@@ -10,6 +10,7 @@ const LoginScreen = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [getEmailValidationStatus, setGetEmailValidationStatus] = useState(false);
 
   const navigation = useNavigation();
 
@@ -35,14 +36,16 @@ const LoginScreen = () => {
           <UserTextInput
             placeholder="Email"
             isPass={false}
-            setStateValue={email}
+            setStateValue={setEmail}
+            setGetEmailValidationStatus={setGetEmailValidationStatus}
+            
           />
 
           {/* password */}
           <UserTextInput
             placeholder="Password"
             isPass={true}
-            setStateValue={email}
+            setStateValue={setPassword}
           />
 
           {/* login button */}
